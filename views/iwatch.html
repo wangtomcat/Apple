@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>iwatch</title>
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/iwatch.css">
+    <link rel="stylesheet" href="../static/css/loginDialog.css">
+</head>
+<body>
+<div class="nav">
+        <div class="logo"><a href="./index.html"><img src="../static/image/logo.png"></a></div>
+        <ul>
+            <li><a href="./iphone.html">iphone</a></li>
+            <li><a href="./mac.html">Mac</a></li>
+            <li><a href="./iwatch.html">iwatch</a></li>
+        </ul>
+        <div class="navRight">
+            <span class="login">登录/</span>
+            <span class="regin">注册</span>
+        </div>
+    </div>
+    
+
+<div class="loader">
+        <div class="lds-ripple">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      
+
+      <nav id="nav">
+        <button id="prev" class="nav-item" data-increment="-1">
+          <img src="../static/image/icon-prev.png" alt="prev" />      </button>
+        <button id="next" class="nav-item" data-increment="1">
+          <img src="../static/image/icon-next.png" alt="next" />      </button>
+      </nav>
+      
+      <section class="coidea-3d-carousel">
+        <div class="stage">
+          
+            
+          <div class="item">
+            <div class="bcg">
+                <img src="../static/image/iwatch3.jpg" alt="">
+                <img src="../static/image/iwatch33.jpg" alt="">
+            </div>
+            <div class="content">
+              <div class="description">
+                <p class="description-target">iwatch 金色铝金属表壳；回环式运动表带</p>
+              </div>
+              <div class="headline">
+                <h2 class="headline-target">RMB 3199</h2>
+              </div>
+              <div class="discover-more">
+                <a href="#" class="discover-more-target">购买</a>            </div>
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="bcg">
+            <img src="../static/image/iwatch2.jpg" alt="">
+            <img src="../static/image/iwatch22.jpg" alt="">
+            </div>
+            <div class="content">
+              <div class="description">
+                <p class="description-target">iwatch 金色不锈钢表壳；回环式运动表带</p>
+              </div>
+              <div class="headline">
+                <h2 class="headline-target">RMB 5499</h2>
+              </div>
+              <div class="discover-more">
+                <a href="#" class="discover-more-target">购买</a>            </div>
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="bcg">
+            <img src="../static/image/iwatch1.jpg" alt="">
+            <img src="../static/image/iwatch11.jpg" alt="">
+
+        </div>
+            <div class="content">
+              <div class="description">
+                <p class="description-target">iwatch 金色铝金属表壳；运动型表带</p>
+              </div>
+              <div class="headline">
+                <h2 class="headline-target">RMB 3199</h2>
+              </div>
+              <div class="discover-more">
+                <a href="#" class="discover-more-target">购买</a>            </div>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+<!-- 登录 -->
+	
+<div id="LoginBox">
+        <div class="row1">
+            登录<a href="#" title="" class="close_btn" id="closeBtn">X</a>
+        </div>
+            账号: <input type="text" id="txtName" placeholder="用户名" />
+            密码:<input type="password" id="txtPwd" placeholder="密码" />
+        <div class="row">
+            <a href="#" id="loginbtn">登录</a>
+        </div>
+    </div>
+    
+    <!-- 注册 -->
+    <div id="reginBox">
+            <div class="row1">
+                登录<a href="#" title="" class="close_btn" id="closeBtn">X</a>
+            </div>
+                账号: 
+                    <input type="text" id="txtName" placeholder="用户名" />
+                密码:
+                    <input type="password" id="txtPwd" placeholder="密码" />
+                手机: 
+                    <input type="text" id="txtTel" placeholder="手机号码" />
+            <div class="row">
+                <a href="#" id="reginbtn">登录</a>
+            </div>
+        </div>
+        <div class="task">
+                <div class="ibuy">
+                        <div class="buyTop">
+                            <h3>订单</h3>
+                        </div>
+                        <div class="buyMain">
+                            <div>姓名：<input type="text" class="buyName"></div>
+                            <div>性别：<input type="text" class="buySex"></div>
+                            <div>手机：<input type="text" class="buyPhone"></div>
+                            <div>商品：<input type="text" class="buyG" disabled></input></div>
+                            <div>地址：<input type="text" class="buyAdd"></div>
+                           <div> 价格：<input type="text" class="buyPrice" disabled></div>
+                        </div>
+                        <div class="buyBtn">
+                            <button class="quxiao">取消</button>
+                            <button class="buygoods">购买</button>
+                        </div>
+                    </div>
+        </div>
+
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/TweenMax.min.js"></script>
+<script src="../static/js/imagesloaded.pkgd.min.js"></script>
+<script src="../static/js/iwatch.js"></script>
+<script src="../static/js/login.js"></script> 
+</body>
+</html>

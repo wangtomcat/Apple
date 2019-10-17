@@ -1,0 +1,286 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 100%;
+    overflow: hidden;
+  }
+  body .loader {
+    background-color: #000000;
+    position: fixed;
+    display: block;
+    width: 100%;
+    width: 100vw;
+    height: 100%;
+    height: 100vh;
+    z-index: 999;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+  }
+  body .loader .lds-ripple {
+    position: absolute;
+    display: block;
+    width: 64px;
+    height: 64px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  body .loader .lds-ripple div {
+    position: absolute;
+    border: 4px solid #780116;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  body .loader .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  body .loader.is-loaded {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -99;
+  }
+  .nav{
+      background-color: #000;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 28px;
+      left: 28px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: -1px;
+      left: -1px;
+      width: 58px;
+      height: 58px;
+      opacity: 0;
+    }
+  }
+
+  body #nav {
+    position: absolute;
+    display: block;
+    width: 166px;
+    height: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 32px;
+    z-index: 100;
+  }
+  @media screen and (max-width: 1199px) {
+    body #nav {
+      width: 134px;
+      height: 48px;
+      bottom: 68px;
+    }
+  }
+  body #nav .nav-item {
+    background-color: #780116;
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    border: none;
+    outline: 0px none;
+    outline: 0px;
+    margin-left: 8px;
+    margin-right: 8px;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 1199px) {
+    body #nav .nav-item {
+      width: 48px;
+      height: 48px;
+      border-radius: 24px;
+    }
+  }
+  body #nav .nav-item img {
+    position: relative;
+    display: block;
+    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
+    height: auto;
+    margin: auto;
+  }
+  body section.coidea-3d-carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    will-change: transform;
+  }
+  body section.coidea-3d-carousel .stage {
+    height: 100%;
+    color: #ddd;
+    margin: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    will-change: transform;
+  }
+  body section.coidea-3d-carousel .stage .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    display: inline-block;
+    display: inline-block;
+    overflow: hidden;
+    transform-origin: 50% 50% -50vw !important;
+    will-change: transform;
+  }
+  body section.coidea-3d-carousel .stage .item .bcg {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  body section.coidea-3d-carousel .stage .item .bcg img{
+      float: left;
+      width: 50%;
+      height: 100%; 
+    
+    }
+
+  body section.coidea-3d-carousel .stage .item .bcg::after {
+    content: "";
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: gradient(90deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.35) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.35) 100%);
+  }
+  body section.coidea-3d-carousel .stage .item .content {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 50%;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    text-align: center;
+    overflow: hidden;
+    z-index: 3;
+  }
+  body section.coidea-3d-carousel .stage .item .content .description {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 24px;
+    overflow: hidden;
+  }
+  body section.coidea-3d-carousel .stage .item .content .description p {
+    color: #000;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+  }
+  @media screen and (max-width: 768px) {
+    body section.coidea-3d-carousel .stage .item .content .description p {
+      font-size: 16px;
+    }
+  }
+  body section.coidea-3d-carousel .stage .item .content .headline {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 64px;
+    overflow: hidden;
+    margin: 32px 0;
+  }
+  @media screen and (max-width: 1199px) {
+    body section.coidea-3d-carousel .stage .item .content .headline {
+      margin: 16px 0;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    body section.coidea-3d-carousel .stage .item .content .headline {
+      margin: 4px 0;
+    }
+  }
+  body section.coidea-3d-carousel .stage .item .content .headline h2 {
+    color: #000;
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+  }
+  @media screen and (max-width: 1199px) {
+    body section.coidea-3d-carousel .stage .item .content .headline h2 {
+      font-size: 32px;
+      letter-spacing: 0.1em;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    body section.coidea-3d-carousel .stage .item .content .headline h2 {
+      font-size: 22px;
+    }
+  }
+  body section.coidea-3d-carousel .stage .item .content .discover-more {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 48px;
+    overflow: hidden;
+  }
+  body section.coidea-3d-carousel .stage .item .content .discover-more a {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 164px;
+    height: 48px;
+    margin: 0 auto;
+    background-color: #000;
+    color: #780116;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0px none;
+    outline: 0px;
+    font-size: 14px;
+    line-height: 50px;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  }
+  body section.coidea-3d-carousel .stage .item .content .discover-more a:hover {
+    background-color: #780116;
+    color: #000;
+  }

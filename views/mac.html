@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mac</title>
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/mac.css">
+    <link rel="stylesheet" href="../static/css/loginDialog.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo"><a href="./index.html"><img src="../static/image/logo.png"></a></div>
+    <ul>
+        <li><a href="./iphone.html">iphone</a></li>
+        <li><a href="./mac.html">Mac</a></li>
+        <li><a href="./iwatch.html">iwatch</a></li>
+    </ul>
+    <div class="navRight">
+        <span class="login">登录/</span>
+        <span class="regin">注册</span>
+    </div>
+</div>
+<div class="main">
+    <div class="maincont">
+        <div class="left">
+            <img src="../static/image/mac1.jpg" alt="">
+            <ul>
+                <li>mac 金色</li>
+                    <li class="item1">1.6GHz 双核处理器，Turbo Boost 最高可达 3.6GHz
+                            256GB 存储容量
+                            触控 ID</span></li>
+                            <li>采用原彩显示技术的视网膜显示屏</li>
+                            <li>1.6GHz 双核第八代 Intel Core i5 处理器，Turbo Boost 最高可达 3.6GHz</li>
+                            <li>8GB 2133MHz LPDDR3 内存</li>
+                            <li>256GB 固态硬盘</li>
+                            <li>Intel UHD Graphics 617 图形处理器</li>
+                            <li>触控 ID</li>
+                            <li>力度触控板</li>
+                            <li class="price">RMB 10,399</li>
+                            <li class="buy"><a href="#">购买</a></li>
+                </ul>
+        </div>
+        <div class="right">
+            <img src="../static/image/mac2.jpg" alt="">
+            <ul>
+                <li>mac 银色</li>
+                    <li class="item1">1.6GHz 双核处理器，Turbo Boost 最高可达 3.6GHz
+                            128GB 存储容量
+                            触控 ID</li>
+                    <li>采用原彩显示技术的视网膜显示屏</li>
+                    <li>1.6GHz 双核第八代 Intel Core i5 处理器，Turbo Boost 最高可达 3.6GHz</li>
+                    <li>8GB 2133MHz LPDDR3 内存</li>
+                    <li>128GB 固态硬盘</li>
+                    <li>Intel UHD Graphics 617 图形处理器</li>
+                    <li>触控 ID</li>
+                    <li>力度触控板</li>
+                    <li class="price">RMB 8,899</li>
+                    <li class="buy"><a href="#">购买</a></li>
+                </ul>
+        </div>
+    </div>
+</div>
+<!-- 登录 -->
+	
+<div id="LoginBox">
+        <div class="row1">
+            登录<a href="#" title="" class="close_btn" id="closeBtn">X</a>
+        </div>
+            账号: <input type="text" id="txtName" placeholder="用户名" />
+            密码:<input type="password" id="txtPwd" placeholder="密码" />
+        <div class="row">
+            <a href="#" id="loginbtn">登录</a>
+        </div>
+    </div>
+    
+    <!-- 注册 -->
+    <div id="reginBox">
+            <div class="row1">
+                登录<a href="#" title="" class="close_btn" id="closeBtn">X</a>
+            </div>
+                账号: 
+                    <input type="text" id="txtName" placeholder="用户名" />
+                密码:
+                    <input type="password" id="txtPwd" placeholder="密码" />
+                手机: 
+                    <input type="text" id="txtTel" placeholder="手机号码" />
+            <div class="row">
+                <a href="#" id="reginbtn">登录</a>
+            </div>
+        </div>
+
+        <div class="task">
+                <div class="ibuy">
+                        <div class="buyTop">
+                            <h3>订单</h3>
+                        </div>
+                        <div class="buyMain">
+                            <div>姓名：<input type="text" class="buyName"></div>
+                            <div>性别：<input type="text" class="buySex"></div>
+                            <div>手机：<input type="text" class="buyPhone"></div>
+                            <div>商品：<textarea type="text" class="buyG" disabled></textarea></div>
+                            <div>地址：<input type="text" class="buyAdd"></div>
+                           <div> 价格：<input type="text" class="buyPrice" disabled></div>
+                        </div>
+                        <div class="buyBtn">
+                            <button class="quxiao">取消</button>
+                            <button class="buygoods">购买</button>
+                        </div>
+                    </div>
+        </div>
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/login.js"></script> 
+<script>
+
+$('.buy').click(function(){
+    $('.task').css('display','block');
+    $('.buyPrice').val($(this).prev().text());
+    // var val = 
+    $('.buyG').val($(this).parent().children().eq(0).text()+','+$(this).parent().children().eq(4).text()+','+$(this).parent().children().eq(5).text());
+    
+});
+$('.buygoods').click(function(){
+    if($('.buyName').val() !='' && $('.buySex').val() !='' && $('.buyPhone').val() !='' && $('.buyAdd').val() !=''){
+        $.ajax({
+        type: "GET",
+        url: "http://localhost:3000/buy",
+        data: {
+            username: $('.buyName').val(),
+            sex:$('.buySex').val(),
+            phone:$('.buyPhone').val(),
+            goods:$('.buyG').val(),
+            address: $('.buyAdd').val(),
+            price:$('.buyPrice').val()
+
+        },
+        success: function (data) {
+            alert('下单成功');
+            location.reload();
+        }
+    });
+    }else{
+        alert('请正确输入相关信息');
+    }
+});
+$('.quxiao').on('click',function(){
+    $('.task').css('display','none');
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+.w_margin{
+    margin-top: 10px;
+}
+.w_inputLeft{
+    float: left;
+}
+.addBody span, .editBody span{
+    color: red;
+    display: none;
+}
+.admaddBody span, .admeditBody span{
+    color: red;
+    display: none;
+}
+.adminlogin{
+    text-align: center;
+    padding-top: 60px;
+}

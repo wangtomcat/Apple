@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>首页</title>
+	<link rel="stylesheet" href="../static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
+	<link rel="stylesheet" href="../static/css/slick.css">
+	<link rel="stylesheet" href="../static/css/jquery.fullPage.css" />
+	<link rel="stylesheet" href="../static/css/index.css">
+	<link rel="stylesheet" href="../static/css/header.css">
+	<link rel="stylesheet" href="../static/css/loginDialog.css">
+
+</head>
+
+<body>
+	
+	<div class="nav">
+		<div class="logo"><a href="./index.html"><img src="../static/image/logo.png"></a></div>
+		<ul>
+			<li><a href="./iphone.html">iphone</a></li>
+			<li><a href="./mac.html">Mac</a></li>
+			<li><a href="./iwatch.html">iwatch</a></li>
+		</ul>
+		<div class="navRight">
+			<span class="login" >登录 /</span>
+			<span class="regin" >注册</span>
+		</div>
+	</div>
+	<!-- 内容 -->
+	<div id="index_main" class="index_main">
+		<div class="section section1">
+			<div class="index_banner">
+				<div class="item">
+					<div class="items scaleBg" style="background-image: url(../static/image/banner1.jpg);"></div>
+					<div class="inner">
+						<div class="block_txt">
+							<h2>轻轻地，再次倾心。</h2>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="items scaleBg" style="background-image: url(../static/image/banner2.jpg);"></div>
+					<div class="inner">
+						<div class="block_txt">
+							<h2>这块表，好不一样。</h2>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="items scaleBg" style="background-image: url(../static/image/banner3.jpg);"></div>
+					<div class="inner">
+						<div class="block_txt">
+							<h4> </h4>
+							<h2>更强劲，更专业的强劲。</h2>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="items scaleBg" style="background-image: url(../static/image/banner4.jpg);"></div>
+					<div class="inner">
+						<div class="block_txt">
+							<h2>一切都刚刚好。</h2>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="items scaleBg" style="background-image: url(../static/image/banner5.jpg);"></div>
+					<div class="inner">
+						<div class="block_txt">
+							<h2>绝妙搭档</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="left slick_txt">
+				<div class="prev slick_arrow"></div>
+			</div>
+			<div class="right slick_txt">
+				<div class="next slick_arrow"></div>
+			</div>
+			<div class="number">
+				<div class="inner clearfix">
+					<span class="active">01</span>
+					<span>02</span>
+					<span>03</span>
+					<span>04</span>
+					<span>05</span>
+				</div>
+			</div>
+		</div>
+		<div class="section section2">
+			<div class="container">
+				<!-- <h3>第二页</h3> -->
+				<div class="section2cont">
+					<h5>iPhone 11 Pro</h5>
+					<h3>摄像头、显示屏、性能，样样 Pro 如其名。</h3>
+					<p><a href="./iphone.html">进一步了解</a></p>
+					
+				</div>
+			</div>
+		</div>
+		<div class="section section3">
+			<div class="container">
+				<!-- <h3>第三页</h3> -->
+				<div class="section3cont">
+					<h5>MacBook Air</h5>
+					<h3>轻轻地，再次倾心。</h3>
+					<p><a href="./mac.html">进一步了解</a></p>
+					
+				</div>
+			</div>
+		</div>
+		<div class="section section4">
+			<div class="container">
+				<!-- <h3>第四页</h3> -->
+				<div class="section4cont">
+					<h5>Apple Watch </h5>
+					<h3>钛金属新登场，精密陶瓷再亮相。</h3>
+					<p><a href="./iwatch.html">进一步了解</a></p>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 登录 -->
+	
+    <div id="LoginBox">
+        <div class="row1">
+            登录<a href="#" title="" class="close_btn" id="closeBtn">X</a>
+        </div>
+			账号: <input type="text" id="txtName" placeholder="用户名" />
+            密码:<input type="password" id="txtPwd" placeholder="密码" />
+        <div class="row">
+            <a href="#" id="loginbtn">登录</a>
+        </div>
+	</div>
+	
+	<!-- 注册 -->
+	<div id="reginBox">
+			<div class="row1">
+				登录<a href="#" title="" class="close_btn" id="closeBtn">X</a>
+			</div>
+				账号: 
+					<input type="text" id="txtName" class="txtName" placeholder="用户名" />
+				密码:
+					<input type="password" id="txtPwd" class="txtPwd" placeholder="密码" />
+				手机: 
+					<input type="text" id="txtTel" class="txtTel" placeholder="手机号码" />
+			<div class="row">
+				<a href="#" id="reginbtn">注册</a>
+			</div>
+		</div>
+	
+	
+
+	<script src="../static/js/jquery.min.js"></script>
+	<script src="../static/js/jquery.fullPage.min.js"></script>
+	<script src="../static/js/index_slick.js"></script>
+	<script src="../static/js/index.js"></script>
+	<script src="../static/js/login.js"></script>
+
+	
+</body>
+
+</html>

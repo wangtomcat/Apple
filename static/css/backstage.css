@@ -1,0 +1,88 @@
+
+.w_head{
+    height: 104px;
+    border-bottom: 1px solid #ccc;
+    background-color: #222;
+}
+.w_logo{
+    line-height: 104px;
+}
+.w_logo img{
+    width: 104px;
+    height: 104px;
+}
+.w_topMiddle{
+    height: 100%;
+    text-align: center;
+}
+.w_topMiddle h2{
+    height: 100%;
+    line-height: 104px;
+}
+.w_topMiddle h2 a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 40px;
+}
+.w_topRight{
+    text-align: center;
+    line-height: 104px;
+
+}
+.w_topRight span{
+    color: #fff;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.w_topRight .w_exit{
+    cursor: pointer;
+}
+.w_topRight .w_exit:hover{
+    color: bisque;
+}
+
+/* 底部 */
+.w_bottom .w_left {
+    /* background-color: #434a52; */
+    padding: 0;
+    height: 685px;
+    border-right: 1px solid #ccc;
+}
+
+.w_bottom .w_left ul {
+    margin: 0;
+    padding: 0;
+
+}
+
+.w_bottom .w_left li {
+    height: 60px;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    line-height: 60px;
+    margin-bottom: 1px;
+}
+.w_bottom .w_left li a{
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.w_bottom .w_left li:hover {
+    background-color: #333c43;
+}
+.w_bottom .w_left li:hover a{
+    color: #fff;
+}
+.w_active{
+    background-color: #333c43;
+    color: #fff;
+}
+.w_bottom .w_right{
+    margin-top: 10px;
+}
+iframe{
+    min-height: 600px;
+}

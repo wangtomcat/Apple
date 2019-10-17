@@ -1,0 +1,47 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: relative;
+}
+.nav{
+    background-color: #000;
+}
+.main{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    height: 900px;
+}
+.main .maincont{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.main .maincont .left{
+    flex: 1;
+}
+.main .maincont .right{
+    flex: 1;
+}
+.main .maincont li{
+    width: 200px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+.main .maincont .item1{
+    font-size: 24px;
+    font-weight: bold;
+}
+.main .maincont .price{
+    font-size: 24px;
+    font-weight: bold;
+}
+.main .maincont .buy a{
+    color: blue;
+}
